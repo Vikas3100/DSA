@@ -1,27 +1,27 @@
-#include<bits/stdc++.h>
-using namespace std;
-// void functionName(int i,int n){
-//     if(i>n){
-//         return;
+// #include<iostream>
+// using namespace std;
+// int fun(int i, int sum){
+//     if(i<1){
+//         return sum;
 //     }
-//     cout<<"Vikas"<<endl;
-//     functionName(i+1,n++);
-    
+//     fun(--i,sum+i);
 // }
 // int main(){
 //     int n;
 //     cin>>n;
-//     functionName(1,n);
+//     int ans=fun(n,0);
+//     cout<<ans;
 // }
-void rev( int n){
+#include<bits/stdc++.h>
+using namespace std;
+int fun(int n){
     if(n==0){
-        return;
+        return 0;
     }
-    cout<<n;
-    rev(--n);
+    return n + fun(n-1);
+
 }
 int main(){
-    int n;
-    cin>>n;
-    rev(n);
+    int n =5;
+    cout<<fun(n);
 }
